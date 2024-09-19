@@ -12,7 +12,7 @@ con.on("open", function () {
   console.log("Database is connected..");
 });
 
-const userRouter = require("./routes/users");
+const userRouter = require("./routes/usersRoute");
 app.use("/users", userRouter);
 
 app.listen(PORT, () => {
