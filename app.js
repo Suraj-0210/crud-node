@@ -22,7 +22,7 @@ const swaggerOptions = {
       },
       servers: [
         {
-          url: "http://localhost:5000", // Replace with your deployed URL
+          url: "https://crud-node-9lop.onrender.com/", // Replace with your deployed URL
         },
       ],
     },
