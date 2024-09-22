@@ -1,8 +1,9 @@
 const express = require("express");
 const mongoose = require("mongoose");
+require("dotenv").config();
 
-const url = "mongodb://localhost:27017/crudDB";
-const PORT = 5000;
+const url = process.env.MONGO;
+const PORT = process.env.PORT || 3000;
 
 const app = express();
 app.use(express.json());

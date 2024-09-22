@@ -4,6 +4,7 @@ const User = require("../models/user");
 const user = require("../models/user");
 
 router.get("/", async (req, res) => {
+  console.log("Get Users requested");
   try {
     const users = await User.find();
     res.json(users);
@@ -14,9 +15,9 @@ router.get("/", async (req, res) => {
 router.get("/:id", async (req, res) => {
   try {
     const user = await User.findById(req.params.id);
-    res.json(users);
+    res.json(user);
   } catch (error) {
-    console.log(`Errors: ${error}`);
+    res.status(404).send("error :" + error);
   }
 });
 
